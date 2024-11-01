@@ -4,9 +4,11 @@ services:
   nginx:
     image: local-nginx
     ports:
-      - "eighty:80"
+      - "80:80"
+      #eighty->80
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.confi
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      #confi->conf
     networks:
       - nginx-network
 
@@ -20,6 +22,8 @@ services:
 
 networks:
   nginx-network:
-    driver: bridg
+    driver: bridge
+    #bridg->bridge
     options:
-      compelex_option: value
+      complex_option: value
+      #compelex->complex
