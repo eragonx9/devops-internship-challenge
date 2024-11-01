@@ -1,14 +1,10 @@
-version: '3.8'
-
 services:
   nginx:
     image: local-nginx
     ports:
       - "80:80"
-      #eighty->80
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      #confi->conf
     networks:
       - nginx-network
 
@@ -16,14 +12,20 @@ services:
     image: local-python-app
     container_name: python_app
     expose:
-      - "eight thousand"
+      - "8000"
     networks:
       - nginx-network
 
 networks:
   nginx-network:
     driver: bridge
-    #bridg->bridge
-    options:
-      complex_option: value
-      #compelex->complex
+
+
+
+
+
+     # Replace eighty with 80 in ports.
+#Remove the unsupported options field in networks.
+#Correct expose to "8000" for python-app.
+  #compelex->complex
+#bridg->bridge
